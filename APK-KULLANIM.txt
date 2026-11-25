@@ -1,0 +1,35 @@
+TELEFON RESET APK - ROOT GEREKTIRMEZ
+
+1. Telefon-Reset.apk dosyasini kur ve ac.
+2. Ilk acilista aciklamayi oku; Ayarlari ac > Telefon Reset > Izin ver.
+   Erisilebilirlik izni standart bir acilir izin penceresinden verilemez;
+   Android ayarlarindaki anahtari kendin acmalisin.
+3. Android 13 ve uzerinde bildirim izni dugmesini kullan.
+4. Eski Windows botunu kapat. Telefon ekraninin kilidini acik tut.
+5. Ucak modu + paylasim testi ile cihazin uyumunu kontrol et.
+6. Baslat: her tamamlanan kontrolden 15 saniye sonra yeni HTTP kontrolu.
+
+Once en az bir basarili site yaniti gerekir. Daha sonra ardisik 3 baglanti
+hatasinda ucak modu 5 saniye acilir ve kapatilir. Seciliyse hotspot ve USB
+paylasimi acilmaya calisilir. Sebeke icin 30 saniye beklenir. Her kurtarmadan
+sonra tekrar basarili yanit gerekir; surekli reset dongusune girmez.
+HTTP 401/403/429 yanitinda kontrol durur. Diger HTTP sunucu hatalari telefon
+resetine neden olmaz. Banka hesabina girilmez; JavaScript sayfasi render edilmez.
+
+Internet kontrolu telefondan yapilir. ADB, PC programi ve root gerekmez.
+USB internet paylasimi icin veri kablosu ve bilgisayardaki ag surucusu gerekir.
+USB paylasimi veya hotspot geri acilamazsa uygulama gunlugunde uyari verir.
+Android Ayarlar ve Hizli Ayarlar agaci disinda erisilebilirlik verisi okunmaz.
+Ekran kilidi bypass edilmez. Izleme sirasinda ekran acik tutulur; guc tuketir.
+Ekran kilitlenirse otomatik dugme islemleri yapilamaz. Ekran ayarlari ve Android
+surumune gore dugmeler degisebilir; tum telefonlarda calisma garantisi yoktur.
+Durdur: devam eden ucak modu kapatma islemi tamamlaninca izleme durur.
+Uygulamayi zorla kapatmak/kaldirmak veya erisilebilirlik iznini islem ortasinda
+kapatmak ucak modunun acik kalmasina yol acabilir; elle kapat.
+Telefon yeniden baslatilinca uygulamayi acip Baslat dugmesine bas.
+
+Kaynak kod: TelefonReset-Android klasoru. Build.ps1 yerel JDK17, Android34
+platform ve build-tools34 araclariyla derler. Araclar tools klasorundedir.
+Android derleyicisinde Turkce dosya yolu sorunu varsa klasoru ASCII yoldan
+veya subst surucusuyle derle. local-signing.jks anahtarini sonraki surumler
+icin sakla; dagitim paketine ekleme. Bu kisisel kullanim icin yerel imzali APK'dir.
